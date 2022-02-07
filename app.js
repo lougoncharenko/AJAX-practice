@@ -19,3 +19,21 @@ function getText(){
     })
 }
 
+
+//get local JSON data
+document.getElementById('button2').addEventListener('click', getJson);
+
+function getJson(){
+    fetch('post.json')
+    .then(function(response){
+        console.log(response)
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+}
