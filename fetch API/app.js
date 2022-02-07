@@ -31,7 +31,34 @@ function getJson(){
     })
     .then(function(data){
         console.log(data);
-        
+        let output="";
+        data.forEach(function(post){
+          output += `<li>${post.title}</li>`
+        });
+        document.getElementById('output').innerHTML=output;
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+}
+
+
+//get from external API
+document.getElementById('button3').addEventListener('click', getApi);
+
+function getApi(){
+    fetch('https://api.github.com/users')
+    .then(function(response){
+        console.log(response)
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        let output="";
+        data.forEach(function(user){
+          output += `<li>${user.login}</li>`
+        });
+        document.getElementById('output').innerHTML=output;
     })
     .catch(function(error){
         console.log(error);
