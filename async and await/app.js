@@ -8,7 +8,7 @@ async function myFunc(){
         setTimeout(()=> resolve ('Hello'), 1000);
     });
 
-    const error =true;
+    const error =false;
     if(!error){
         const res= await promise; //wait until promise is resolved
         return res;
@@ -19,7 +19,24 @@ async function myFunc(){
 
 // console.log(myFunc());
  //returns a promise so we need to extract the response
-myFunc()
+
+
+
+
+ myFunc()
 .then(response=> console.log(response))
 .catch(error=>console.log(error));
 //adding the async makes it return a promise
+
+
+async function getUsers(){
+    //await response of the fetch call
+    const response  =await fetch('https://api.github.com/users');
+    //only proceed once its resolved
+    const data= await response.json();
+    //only ptoceeed once second promise is resolved
+    return data;
+}
+
+
+getUsers().then(users => console.log(users));
