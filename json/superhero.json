@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Atom",
+        "age" : 25,
+        "secretIdentity": "Correy Fields",
+        "powers": [
+            "radiation resistance",
+            "turning tiny",
+            "radiation blast"
+        ]
+
+    },
+    {
+        "name": "Miss Uppercut",
+        "age": 23,
+        "secretIdentity": "Jane Wilson",
+        "powers": [
+            "Super Strength",
+            "damage resistance",
+            "fast reflexes"
+        ]
+    },
+    {
+        "name": "Aquawoman",
+        "age": 27,
+        "secretIdentity": "Sandy King",
+        "powers": [
+            "talk with sea life",
+            "breath underwater",
+            "swim fast"
+        ]
+}
+
+]
